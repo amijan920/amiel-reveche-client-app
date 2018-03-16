@@ -1,3 +1,15 @@
-<p>
-  greeting works!
-</p>
+<div id="content-wrapper">
+	<div id="greeting-container">
+		<div id="picture-container" class="in-line" >
+			<div class="face-pic" *ngFor='let greeting of greetingSet'>
+				<img id="greeting-image" [@fadeInOut]="greeting.state" *ngIf='greeting.state === "stated"' src={{faceImages[greetingSet[greetingIndex].faceId]}}/>
+			</div>
+		</div>
+		<div id="bubble-container" class="in-line" *ngIf='greetingStarted' (click)='nextGreeting()'>
+			<img id="greeting-bubble" src="assets/images/speech_bubble.png"/>
+			<div id="greeting-text-container" *ngFor='let greeting of greetingSet'>
+				<div class="greeting-text" [@flyInOut]="greeting.state" *ngIf='greeting.state === "stated"'>{{greeting.message}}</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,54 @@
+#content-wrapper {
+	margin:0px;
+	width:100%;
+	height:100%;
+	background: linear-gradient(to bottom right, #52c1b2, #56b78d);
+	color: #ffffff;
+	text-align: center;
+}
+
+#content-wrapper:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+#greeting-container {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#picture-container {
+	width: 128px;
+	height: 128px;
+}
+
+.face-pic {
+	position: absolute;
+}
+
+#bubble-container {
+	position: relative;
+	margin-left: 32px;
+}
+
+#bubble-container img {
+	padding-bottom: 72px;
+}
+
+#greeting-text-container {
+	position: absolute;
+	top: 94px;
+	transform: translate(0%, -50%);
+	width: 100%;
+    box-sizing: border-box;
+	padding: 32px;
+}
+
+.greeting-text {
+	text-align: center;
+	color: #52c1b2;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 2em;
+}
