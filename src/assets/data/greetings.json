@@ -1,0 +1,25 @@
+[ {
+	"message" : "Hey there!",
+	"duration" : 2000,
+	"faceId" : 0
+}, {
+	"message" : "The name's Amiel...",
+	"duration" : 2000,
+	"faceId" : 1
+}, {
+	"message" : "a software developer",
+	"duration" : 2000,
+	"faceId" : 0
+}, {
+	"message" : "Welcome to my website!",
+	"duration" : 2000,
+	"faceId" : 1
+}, {
+	"message" : "As you can see there's still a lot of things I need to do",
+	"duration" : 2000,
+	"faceId" : 2
+}, {
+	"message" : "Until I'm done, here's a copy of my resume:",
+	"duration" : 2000,
+	"faceId" : 0
+} ]
