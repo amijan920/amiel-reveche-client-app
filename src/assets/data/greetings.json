@@ -1,7 +1,7 @@
 [ {
-	"message" : "Hey there!",
+	"message" : "Hey there! I didn't expect someone here so soon",
 	"duration" : 2000,
-	"faceId" : 0
+	"faceId" : 3
 }, {
 	"message" : "The name's Amiel...",
 	"duration" : 2000,
@@ -15,11 +15,15 @@
 	"duration" : 2000,
 	"faceId" : 1
 }, {
-	"message" : "As you can see there's still a lot of things I need to do",
+	"message" : "As you can see... there's really not much on here yet",
 	"duration" : 2000,
 	"faceId" : 2
 }, {
-	"message" : "Until I'm done, here's a copy of my resume:",
+	"message" : "Don't worry though, soon there will be",
+	"duration" : 2000,
+	"faceId" : 1
+}, {
+	"message" : "Until it's done, here's a copy of my <a href=\"https://d301fttci0tv5q.cloudfront.net/api/download/resume\">resume</a>!",
 	"duration" : 2000,
 	"faceId" : 0
 } ]

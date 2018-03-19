@@ -37,6 +37,15 @@ import 'rxjs/add/operator/map';
       transition('* => void', [
         animate('160ms 160ms', style({opacity: 0}))
       ])
+    ]), trigger('bounceEmphasis', [
+      state('base', style({transform: 'translateY(0)'})),
+      transition('base => apex', [
+        style({transform: 'translateY(-2%)'}),
+        animate('160ms ease-in')
+      ]),
+      transition('apex => base', [
+        animate('160ms ease-out', style({transform: 'translateY(0)'}))
+      ])
     ])]
 })
 
@@ -45,10 +54,13 @@ export class GreetingComponent implements OnInit {
   greetingStarted = false;
   greetingIndex = 0;
   greetingSet: Greeting[] = [new Greeting('', 1000, 0)];
+  bounceState = 'base';
 
   faceImages: string[] = ['assets/images/greeting_pic_00.png',
     'assets/images/greeting_pic_01.png',
-    'assets/images/greeting_pic_02.png'];
+    'assets/images/greeting_pic_02.png',
+    'assets/images/greeting_pic_03.png',
+    'assets/images/greeting_pic_04.png'];
 
   constructor(private greetingService: GreetingService) {
   }
@@ -65,9 +77,18 @@ export class GreetingComponent implements OnInit {
     if (this.greetingIndex >= this.greetingSet.length - 1) {
       return;
     }
+    this.bounceUp();
     this.greetingSet[this.greetingIndex].cycleState();
     this.greetingIndex = (this.greetingIndex + 1) % this.greetingSet.length;
     this.greetingSet[this.greetingIndex].cycleState();
+  }
+
+  bounceUp() {
+    this.bounceState = 'apex';
+  }
+
+  bounceDown() {
+    this.bounceState = 'base';
   }
 
 }
